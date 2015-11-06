@@ -9,6 +9,54 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+"use strict";
+
+var photoArray = [
+    {filename: "IMG_4148.JPG",
+     caption: "Photograpy - Trinity College Cinestudio"},
+    {filename: "QQ20151106-6.png",
+     caption: "The Stanford Shark Project - After interviewing 30+ people, we decide to develope a DRONE to detect shark for the existing market"},
+    {filename: "IMG_1762.PNG",
+     caption: "Photography - Painting of Body"},
+    {filename: "IMG_4006.JPG",
+     caption: "Design - MultiDimentional Cube-Globe"},
+    {filename: "IMG_3857.JPG",
+     caption: "Photography - One Night in NYC"},
+    {filename: "QQ20151106-7.png",
+     caption: "WebApp - Stanford-specific version of Google Maps, with zoom in, zoom out, dragging and center view function "},
+  ];
+
+function changePrev() {
+  var imageNode = document.getElementById("photo");
+  for (var i=0; i<10; i++){
+    if ( photoArray[i].filename == imageNode.getAttribute("src")) {
+      var num = (i+5)%6;
+      var add = photoArray[num].filename;
+      var dec = photoArray[num].caption;
+      break;
+    }
+  }
+  imageNode.setAttribute("src",add);
+  document.getElementById("caption").innerHTML = dec;
+
+}
+function changeNext() {
+
+  var imageNode = document.getElementById("photo");
+  for (var i=0; i<10; i++){
+    if ( photoArray[i].filename == imageNode.getAttribute("src")) {
+      var num = (i+1)%6;
+      var add = photoArray[num].filename;
+      var dec = photoArray[num].caption;
+      break;
+    }
+  }
+  imageNode.setAttribute("src",add);
+  document.getElementById("caption").innerHTML = dec;
+
+}
+</script>
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -44,6 +92,7 @@
             </ul>
           </li>
         </ul>
+
         <ul class="nav navbar-nav navbar-right">
           <li><a class="link" href="https://github.com/weixivc"><i class="fa fa-github-square fa-2x"></i></a></li>
           <li><a class="link" href="https://github.com/weixivc"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
@@ -63,14 +112,23 @@
 </div>
 <div id="section2" class="container-fluid">
             <div id="photoFrame">
-            <img id="photo" src="699.jpg" alt="personal photo"/>
+            <img id="Pphoto" src="699.jpg" alt="personal photo"/>
           </div>
           <div id="aboutC" class="content">
               <p>Hi, I am Weixi Zhang. I'm a software engineer focusing in web development. I'm a Computer Science and Studio Arts major at Trinity College. My interests include technology, photography, cooking & snowboarding.</p>
           </div>
 </div>
 <div id="section3" class="container-fluid">
-  <h1>Portfolio</h1> 
+  <div id="photoSection">
+    <img  id='photo' src='IMG_4148.JPG' alt='photo' />
+    <div id="caption">
+      Photograpy-Trinity College Cinestudio
+    </div>
+    <div id="overlay">
+      <div id="forwardOverlay" onclick="changePrev();"><img id='leftarrow' src='left-arrow-gray-hi.png' alt='photo' /></div>
+      <div id="backwardOverlay" onclick="changeNext();"><img id='rightarrow' src='left-arrow-right-hi.png' alt='photo' /></div>
+    </div>
+  </div>
 </div>
 <div id="section41" class="container-fluid">
   <div id="eduH">
@@ -106,6 +164,22 @@
                 </li>
               </ul>
           </div>
+
+</div>
+<div id="section43" class="container-fluid">
+            <div id="skillH">
+               <p><span class="subTitle">Skills</span> </p>
+          </div>
+
+          <div id="skillC" class="content">   
+            <p>Python<br/> 
+               Java<br/> 
+               C<br/>
+               HTML/CSS<br/>
+               JavaScript<br/>
+            </p>
+          </div>
+
 
 </div>
 
