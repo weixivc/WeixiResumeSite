@@ -19,7 +19,7 @@ body {
 
 }
 #name{
-	height: 160px;
+  height: 160px;
 }
 #leftBar {
     position: absolute;
@@ -33,13 +33,14 @@ body {
 
 }
 #section1 {
-    height:500px;}
+    height:500px;
+  }
 #section2 {
     height:400px; 
     background-color: #ffffff;}
 #section3 {
-    height:270px;
-    background-color: #d8d8d8;}
+    height:470px;
+    background-color: #ffffff;}
 #section41 {
     height:270px;
     background-color: #ffffff;}
@@ -55,6 +56,7 @@ body {
   top:500px;
 }
 #aboutC p{
+  font-family: Verdana, Geneva, sans-serif;
   position:absolute;
   bottom:30px;
   padding: 50px;
@@ -63,7 +65,7 @@ body {
 #eduC {
   position: absolute;
   left: 340px;
-  top: 1170px;
+  top: 1370px;
   width: 480px;
   height: 270px;
   background-color: #9c3131;
@@ -71,6 +73,7 @@ body {
 
 }
 #eduC p{
+  font-family: Verdana, Geneva, sans-serif;
   position:absolute;
   bottom:10px;
   padding-left: 50px;
@@ -79,20 +82,23 @@ body {
 }
 #eduH {  position: absolute;
   left: 170px;
-  top: 1170px;
+  top: 1370px;
   width: 180px;
   height: 180px;
+  font-size: 22pt;
   background-color: #9d8787;
   color: white;}
 #eduH p{  position:absolute;
   left: 10px;
   bottom:40px;
   text-align: center;
+  font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
 }
 #expC {
+  font-family: Verdana, Geneva, sans-serif;
   position: absolute;
   left: 50px;
-  top: 1440px;
+  top: 1640px;
   width: 670px;
   height: 330px;
   background-color: #392e2e;
@@ -104,19 +110,52 @@ body {
   position: absolute;
   bottom: 50px;
 }
+#skillH{
+  position: absolute;
+  left: 206px;
+  top: 1970px;
+  width: 180px;
+  height: 180px;
+  background-color: #9c3131;
+  color: white;
+}
+#skillH p{  position:absolute;
+  left: 40px;
+  bottom:40px;
+  text-align: center;
+  font-size: 22pt;
+  font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+}
+#skillC {
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+  position: absolute;
+  right: 260px;
+  top: 1970px;
+  width: 300px;
+  height: 300px;
+  background-color: #9d8787;
+  color: white;
+}
+#skillC p {
+    position:absolute;
+  bottom:10px;
+  padding: 50px;
+  padding-left: 150px;
+}
 .home {
-	background-color: red;
+  background-color: red;
 }
 .navItem {
 text-align: left;
-	 	width: 150px;
+    width: 150px;
 
 }
-#photo {
+#Pphoto {
     position: absolute;
     top: 500px;
     left: 40px;
-	height: 400px;
+  height: 400px;
 }
 .container {
  /*   background-color: white;*/
@@ -129,4 +168,61 @@ text-align: left;
 }
 .col-sm-4 {
     /*background-color: white;*/
+}
+
+
+#photoSection{
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  margin: auto;
+    position: absolute;
+    bottom: 200px;
+    left: -410px;
+    top: 0;
+    right: 0;}
+#photo {
+      position: absolute;
+    bottom: -250px;
+    left: 100px;
+}
+#overlay{width: 800px;
+  position: absolute;
+  bottom: -200px;
+}
+#caption {
+  width: 650px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 14pt;
+  font-family: sans-serif;
+  background-color: #9c3131;
+  opacity: 0.7;
+  position: absolute;
+  bottom: -250px;
+  left: 100px;
+}
+#forwardOverlay{width:400px;
+  height: 600px;
+  opacity: 0.5;
+  float: left;
+
+}
+#leftarrow {
+  width: 100px;
+  position: absolute;
+  bottom:50px;
+  left: 50px; 
+}
+#rightarrow {
+  width: 100px;
+  position: absolute;
+  bottom:50px;
+  left: 700px; 
+}
+#backwardOverlay{width:400px;
+  height: 600px;
+  opacity: 0.5;
+  float: left;
 }
