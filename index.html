@@ -1,178 +1,131 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Weixi Zhang Resume Site</title>
-  <meta charset="utf-8">
-  <link href = "test.css" rel="stylesheet" type="text/css"/>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script>
-"use strict";
+  <head>
+    <title>Weixi Zhang Resume Site</title>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src ="js/index.js"></script>
 
-var photoArray = [
-    {filename: "IMG_4148.JPG",
-     caption: "Photograpy - Trinity College Cinestudio"},
-    {filename: "QQ20151106-6.png",
-     caption: "The Stanford Shark Project - After interviewing 30+ people, we decide to develope a DRONE to detect shark for the existing market"},
-    {filename: "IMG_1762.PNG",
-     caption: "Photography - Painting of Body"},
-    {filename: "IMG_4006.JPG",
-     caption: "Design - MultiDimentional Cube-Globe"},
-    {filename: "IMG_3857.JPG",
-     caption: "Photography - One Night in NYC"},
-    {filename: "QQ20151106-7.png",
-     caption: "WebApp - Stanford-specific version of Google Maps, with zoom in, zoom out, dragging and center view function "},
-  ];
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-function changePrev() {
-  var imageNode = document.getElementById("photo");
-  for (var i=0; i<10; i++){
-    if ( photoArray[i].filename == imageNode.getAttribute("src")) {
-      var num = (i+5)%6;
-      var add = photoArray[num].filename;
-      var dec = photoArray[num].caption;
-      break;
-    }
-  }
-  imageNode.setAttribute("src",add);
-  document.getElementById("caption").innerHTML = dec;
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="navbar-toggle myNavbar " data-toggle="collapse" >
+           <a class="link" href="https://github.com/weixivc"><i class="fa fa-github-square fa-2x"></i></a>
+           <a class="link" href="https://github.com/weixivc"><i class="fa fa-linkedin-square fa-2x"></i></a>
+        </div>
 
-}
-function changeNext() {
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 
-  var imageNode = document.getElementById("photo");
-  for (var i=0; i<10; i++){
-    if ( photoArray[i].filename == imageNode.getAttribute("src")) {
-      var num = (i+1)%6;
-      var add = photoArray[num].filename;
-      var dec = photoArray[num].caption;
-      break;
-    }
-  }
-  imageNode.setAttribute("src",add);
-  document.getElementById("caption").innerHTML = dec;
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>   
 
-}
-</script>
-
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <div class="navbar-toggle myNavbar " data-toggle="collapse" >
-         <a class="link" href="https://github.com/weixivc"><i class="fa fa-github-square fa-2x"></i></a>
-         <a class="link" href="https://github.com/weixivc"><i class="fa fa-linkedin-square fa-2x"></i></a>
+        </button>
+        <a class="navbar-brand" href="#"></a>
       </div>
-
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>   
-
-      </button>
-      <a class="navbar-brand" href="#"></a>
+      <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">About</a></li>
+            <li><a href="#section3">Portfolio</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Resume <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#section41">Education</a></li>
+                <li><a href="#section42">Experience</a></li>
+                <li><a href="#section43">Skills</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="link" href="https://github.com/weixivc"><i class="fa fa-github-square fa-2x"></i></a></li>
+            <li><a class="link" href="https://github.com/weixivc"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="#section1">Home</a></li>
-          <li><a href="#section2">About</a></li>
-          <li><a href="#section3">Portfolio</a></li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Resume <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#section41">Education</a></li>
-              <li><a href="#section42">Experience</a></li>
-              <li><a href="#section43">Skills</a></li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="link" href="https://github.com/weixivc"><i class="fa fa-github-square fa-2x"></i></a></li>
-          <li><a class="link" href="https://github.com/weixivc"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
-        </ul>
+  </nav>    
+
+  <div id="section1" class="container-fluid">
+    <div id="leftBarBack">
+    </div>
+    <div id="leftBar">
+      <p class="name">Weixi Zhang</p> 
+      <p class="contact">E-mail: weixi.vc@gmail.com</p> 
+      <p class="contact">300 Summit Street, Hartford, CT</p> 
+    </div>
+  </div>
+
+  <div id="section2" class="container-fluid">
+    <div id="photoFrame">
+      <img id="Pphoto" src="img/699.jpg" alt="personal photo"/>
+    </div>
+    <div id="aboutC" class="content">
+      <p>Hi, I am Weixi Zhang. I'm a software engineer focusing in web development. I'm a Computer Science and Studio Arts major at Trinity College. My interests include technology, photography, cooking & snowboarding.</p>
+    </div>
+  </div>
+
+  <div id="section3" class="container-fluid">
+    <div id="photoSection">
+      <img  id='photo' src='img/IMG_4148.JPG' alt='photo' />
+      <div id="caption">
+        Photograpy-Trinity College Cinestudio
+      </div>
+      <div id="overlay">
+        <div id="forwardOverlay" onclick="changePrev();"><img id='leftarrow' src='img/left-arrow-gray-hi.png' alt='photo' /></div>
+        <div id="backwardOverlay" onclick="changeNext();"><img id='rightarrow' src='img/left-arrow-right-hi.png' alt='photo' /></div>
       </div>
     </div>
   </div>
-</nav>    
 
-<div id="section1" class="container-fluid">
-  <div id="leftBarBack">
-  </div>
-  <div id="leftBar">
-    <p class="name">Weixi Zhang</p> 
-    <p class="contact">E-mail: weixi.vc@gmail.com</p> 
-    <p class="contact">300 Summit Street, Hartford, CT</p> 
-  </div>
-</div>
-
-<div id="section2" class="container-fluid">
-  <div id="photoFrame">
-    <img id="Pphoto" src="699.jpg" alt="personal photo"/>
-  </div>
-  <div id="aboutC" class="content">
-    <p>Hi, I am Weixi Zhang. I'm a software engineer focusing in web development. I'm a Computer Science and Studio Arts major at Trinity College. My interests include technology, photography, cooking & snowboarding.</p>
-  </div>
-</div>
-
-<div id="section3" class="container-fluid">
-  <div id="photoSection">
-    <img  id='photo' src='IMG_4148.JPG' alt='photo' />
-    <div id="caption">
-      Photograpy-Trinity College Cinestudio
+  <div id="section41" class="container-fluid">
+    <div id="eduH">
+       <p><span class="subTitle">Education</span> </p>
     </div>
-    <div id="overlay">
-      <div id="forwardOverlay" onclick="changePrev();"><img id='leftarrow' src='left-arrow-gray-hi.png' alt='photo' /></div>
-      <div id="backwardOverlay" onclick="changeNext();"><img id='rightarrow' src='left-arrow-right-hi.png' alt='photo' /></div>
+    <div id="eduC" class="content">   
+        <p>Trinity College  2018’<br/> 
+           Major: Computer Science & Studio Art<br/> 
+           Minor: Cognitive Science <br/>
+           Currently taking: <br/>
+           Mobile Computing <br/>
+           Computer System
+        </p>
     </div>
   </div>
-</div>
 
-<div id="section41" class="container-fluid">
-  <div id="eduH">
-     <p><span class="subTitle">Education</span> </p>
+  <div id="section42" class="container-fluid">
+    <div id="expC" class="content">   
+      <ul><span class="subTitle">Experience</span> 
+        <li>June 2012- Sept 2015: Tour Guide of History and Natural Museum.</li>
+        <li>June-Sept, 2014 : TOFEL Test Tutor. </li>
+        <li>Jan- Sept, 2015: Trinity College Quest Program Coordinator.</li>
+        <li>Aug 2015: Trinity International Orientation Leader.</li>
+        <li>Oct 2015: A100 Apprentice Developer.</li>
+      </ul>
+    </div>
   </div>
-  <div id="eduC" class="content">   
-      <p>Trinity College  2018’<br/> 
-         Major: Computer Science & Studio Art<br/> 
-         Minor: Cognitive Science <br/>
-         Currently taking: <br/>
-         Mobile Computing <br/>
-         Computer System
+
+  <div id="section43" class="container-fluid">
+    <div id="skillH">
+      <p><span class="subTitle">Skills</span> </p>
+    </div>
+    <div id="skillC" class="content">   
+      <p>Python<br/> 
+         Java<br/> 
+         C<br/>
+         HTML/CSS<br/>
+         JavaScript<br/>
       </p>
+    </div>
   </div>
-</div>
 
-<div id="section42" class="container-fluid">
-  <div id="expC" class="content">   
-    <ul><span class="subTitle">Experience</span> 
-      <li>June 2012- Sept 2015: Tour Guide of History and Natural Museum.</li>
-      <li>June-Sept, 2014 : TOFEL Test Tutor. </li>
-      <li>Jan- Sept, 2015: Trinity College Quest Program Coordinator.</li>
-      <li>Aug 2015: Trinity International Orientation Leader.</li>
-      <li>Oct 2015: A100 Apprentice Developer.</li>
-    </ul>
-  </div>
-</div>
-
-<div id="section43" class="container-fluid">
-  <div id="skillH">
-    <p><span class="subTitle">Skills</span> </p>
-  </div>
-  <div id="skillC" class="content">   
-    <p>Python<br/> 
-       Java<br/> 
-       C<br/>
-       HTML/CSS<br/>
-       JavaScript<br/>
-    </p>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>
